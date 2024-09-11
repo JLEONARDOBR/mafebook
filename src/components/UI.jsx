@@ -68,7 +68,7 @@ export const UI = () => {
                 }`}
                 onClick={() => setPage(index)}
               >
-                {index === 0 ? "Cover" : `Pager ${index}`}
+                {index === 0 ? "Cover" : `Page ${index}`}
               </button>
             ))}
             <button
