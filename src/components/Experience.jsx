@@ -14,11 +14,11 @@ export const Experience = () => {
       </Float>
       {/* OrbitControls limitados a 10 graus em X, Y e Z */}
       <OrbitControls
-        maxPolarAngle={Math.PI / 2 + 0.17} // Limita a rotação no eixo X a 10 graus
-        minPolarAngle={Math.PI / 2 - 0.17} // Limita a rotação no eixo X a -10 graus
-        maxAzimuthAngle={0.17} // Limita rotação no eixo Y a 10 graus
-        minAzimuthAngle={-0.17} // Limita rotação no eixo Y a -10 graus
-      />
+  maxPolarAngle={Math.PI / 2 + 0.436} // Limita a rotação no eixo X a 25 graus
+  minPolarAngle={Math.PI / 2 - 0.436} // Limita a rotação no eixo X a -25 graus
+  maxAzimuthAngle={0.436} // Limita rotação no eixo Y a 25 graus
+  minAzimuthAngle={-0.436} // Limita rotação no eixo Y a -25 graus
+/>
       <Environment preset="studio" />
       <directionalLight
         position={[2, 5, 2]}
