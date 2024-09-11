@@ -3,7 +3,14 @@ import { Book } from "./Book";
 export const Experience = () => {
   return (
     <>
-
+      <Float
+        rotation-x={0}
+        floatIntensity={0}
+        speed={0}
+        rotationIntensity={0}
+      >
+        <Book />
+      </Float>
       <OrbitControls />
       <Environment preset="studio"></Environment>
       <directionalLight
