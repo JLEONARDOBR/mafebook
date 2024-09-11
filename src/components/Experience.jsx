@@ -1,5 +1,6 @@
 import { Environment, Float, OrbitControls } from "@react-three/drei";
 import { Book } from "./Book";
+
 export const Experience = () => {
   return (
     <>
@@ -11,7 +12,8 @@ export const Experience = () => {
       >
         <Book />
       </Float>
-  
+      {/* OrbitControls com rotação no eixo Y limitada */}
+      <OrbitControls maxAzimuthAngle={0} minAzimuthAngle={0} />
       <Environment preset="studio"></Environment>
       <directionalLight
         position={[2, 5, 2]}
