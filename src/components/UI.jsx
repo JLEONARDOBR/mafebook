@@ -39,6 +39,14 @@ pages.push({
   back: "book-back",
 });
 
+const horizontalScrollAnimation = {
+  animation: 'horizontal-scroll 30s linear infinite'
+};
+
+const horizontalScrollAnimation2 = {
+  animation: 'horizontal-scroll-2 30s linear infinite'
+};
+
 export const UI = () => {
   const [page, setPage] = useAtom(pageAtom);
 
