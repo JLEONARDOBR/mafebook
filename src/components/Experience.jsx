@@ -3,14 +3,11 @@ import { Book } from "./Book";
 export const Experience = () => {
   return (
     <>
-      <Float
-        
-        floatIntensity={1}
-        speed={2}
+      <
         
       >
         <Book />
-      </Float>
+  
       <OrbitControls />
       <Environment preset="studio"></Environment>
       <directionalLight
