@@ -60,7 +60,7 @@ export const UI = () => {
         {/* Novo botão no canto superior direito */}
         <a
           className="pointer-events-auto mt-10 mr-10 absolute top-0 right-0"
-          href="https://wa.me/5555119664054?text=Estive%20em%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20trabalho"
+          href="https://wa.me/55119664054?text=Estive%20em%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20trabalho"
         >
           <img className="w-20" src="/images/Whats.png" />
         </a>
