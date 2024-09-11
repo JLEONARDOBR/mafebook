@@ -1,7 +1,25 @@
 import { Environment, Float, OrbitControls } from "@react-three/drei";
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Euler } from "three";
 import { Book } from "./Book";
 
 export const Experience = () => {
+  const controlsRef = useRef();
+
+  // Limita a rotação nos eixos X, Y e Z para no máximo 10 graus (~0.1745 radianos)
+  useFrame(() => {
+    if (controlsRef.current) {
+      const maxRotation = 0.1745; // 10 degrees in radians
+      const minRotation = -0.1745;
+
+      const { x, y, z } = controlsRef.current.getAzimuthalAngle();
+      controlsRef.current.object.rotation.x = Math.max(minRotation, Math.min(maxRotation, x));
+      controlsRef.current.object.rotation.y = Math.max(minRotation, Math.min(maxRotation, y));
+      controlsRef.current.object.rotation.z = Math.max(minRotation, Math.min(maxRotation, z));
+    }
+  });
+
   return (
     <>
       <Float
@@ -12,9 +30,10 @@ export const Experience = () => {
       >
         <Book />
       </Float>
-      {/* OrbitControls com rotação nos eixos Y e Z desativados */}
       <OrbitControls
-        enableRotate={false} // Desativa rotação nos eixos X, Y, Z
+        ref={controlsRef}
+        maxPolarAngle={Math.PI / 2 + 0.1745} // Limita rotação vertical no eixo X
+        minPolarAngle={Math.PI / 2 - 0.1745} // Limita rotação vertical no eixo X
       />
       <Environment preset="studio" />
       <directionalLight
