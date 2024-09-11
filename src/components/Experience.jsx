@@ -12,9 +12,11 @@ export const Experience = () => {
       >
         <Book />
       </Float>
-      {/* OrbitControls com rotação no eixo Y limitada */}
-      <OrbitControls maxAzimuthAngle={0} minAzimuthAngle={0} />
-      <Environment preset="studio"></Environment>
+      {/* OrbitControls com rotação nos eixos Y e Z desativados */}
+      <OrbitControls
+        enableRotate={false} // Desativa rotação nos eixos X, Y, Z
+      />
+      <Environment preset="studio" />
       <directionalLight
         position={[2, 5, 2]}
         intensity={2.5}
