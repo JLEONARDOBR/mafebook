@@ -77,7 +77,7 @@ export const UI = () => {
                 }`}
                 onClick={() => setPage(index)}
               >
-                {index === 0 ? "Cover" : `Page ${index}`}
+                {index === 0 ? "Capa" : `Pag ${index}`}
               </button>
             ))}
             <button
@@ -88,7 +88,7 @@ export const UI = () => {
               }`}
               onClick={() => setPage(pages.length)}
             >
-              Back Cover
+              Contracapa
             </button>
           </div>
         </div>
