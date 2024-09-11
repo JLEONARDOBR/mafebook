@@ -4,10 +4,10 @@ export const Experience = () => {
   return (
     <>
       <Float
-        rotation-x={0}
-        floatIntensity={0}
-        speed={0}
-        rotationIntensity={0}
+        
+        floatIntensity={1}
+        speed={2}
+        rotationIntensity={2}
       >
         <Book />
       </Float>
